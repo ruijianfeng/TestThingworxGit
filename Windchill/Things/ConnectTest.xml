@@ -15,7 +15,7 @@
          enabled="true"
          homeMashup=""
          identifier=""
-         lastModifiedDate="2019-12-10T21:19:09.924+08:00"
+         lastModifiedDate="2019-12-10T21:29:29.227+08:00"
          name="ConnectTest"
          projectName="Windchill"
          published="false"
@@ -393,7 +393,7 @@
                                         <![CDATA[
                                         var params1 = {
                                         	url: "https://PP-1912030821D4.portal.ptc.io/Windchill/servlet/odata/v3/ProdMgmt/Parts('"+PartOID+"')?$expand=Representations",
-                                        	password: "ptc" /* STRING123 */,
+                                        	password: "ptc" /* STRING1231111 */,
                                         	username: "wcadmin" /* STRING */
                                         };
                                         // result: JSONffdsa
