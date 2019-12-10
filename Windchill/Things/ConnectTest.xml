@@ -393,7 +393,7 @@
                                         <![CDATA[
                                         var params1 = {
                                         	url: "https://PP-1912030821D4.portal.ptc.io/Windchill/servlet/odata/v3/ProdMgmt/Parts('"+PartOID+"')?$expand=Representations",
-                                        	password: "ptc" /* STRING1231111 */,
+                                        	password: "ptc" /* STRING1231111123123 */,
                                         	username: "wcadmin" /* STRING */
                                         };
                                         // result: JSONffdsa
