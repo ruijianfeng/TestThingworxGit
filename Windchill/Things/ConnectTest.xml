@@ -1,0 +1,1186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b12"
+ majorVersion="8"
+ minorVersion="5"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="0"
+ schemaVersion="1050"
+ universal="password">
+    <Things>
+        <Thing
+         description="11111111111111"
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         lastModifiedDate="2019-12-10T17:11:56.332+08:00"
+         name="ConnectTest"
+         projectName="Windchill"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isLogged="false"
+                     aspect.isPersistent="true"
+                     baseType="INFOTABLE"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="TreeInfoTable"
+                     ordinal="2"></PropertyDefinition>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="get3DbyPartNumber">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="partNumber"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getDMOIDByPartID">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="PartOID"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getIBAValueBysubString">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Input"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getNumberByIofoTable">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INFOTABLE"
+                             description=""
+                             name="selectTable"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getOIDByIofoTable">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INFOTABLE"
+                             description=""
+                             name="selectTable"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getPartByNodes">
+                        <ResultType
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="NodeName"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getSonMuUrl">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.isRequired="true"
+                             baseType="STRING"
+                             description=""
+                             name="node"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getTreeInfoTable">
+                        <ResultType
+                         aspect.dataShape="WindchillClassificationDS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="infotable">
+                        <ResultType
+                         aspect.dataShape="WindchillClassificationDS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="LoopClassfication">
+                        <ResultType
+                         aspect.dataShape="WindchillClassificationDS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Root"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="WindchillClassificationDS"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="table"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="setTreeInfoTable">
+                        <ResultType
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="test">
+                        <ResultType
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="test2">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="yui">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="get3DbyPartNumber">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var result = "/Thingworx/"+partNumber+".pvz";
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getDMOIDByPartID">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var params1 = {
+                                        	url: "https://PP-1912030821D4.portal.ptc.io/Windchill/servlet/odata/v3/ProdMgmt/Parts('"+PartOID+"')?$expand=Representations",
+                                        	password: "ptc" /* STRING */,
+                                        	username: "wcadmin" /* STRING */
+                                        };
+                                        // result: JSON
+                                        
+                                        var response = Resources["ContentLoaderFunctions"].GetJSON(params1);
+                                        var reps = response.Representations;
+                                        if(reps.length>0){
+                                        		for(var i = 0;i<reps.length;i++){
+                                                    var rep = reps[i];
+                                                    var def = rep.DefaultRepresentation;
+                                                    var derivedImageid = rep.ID;
+                                                    if(def==true){
+                                                     var result = derivedImageid;
+                                                    }
+                                                }
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getIBAValueBysubString">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var num = Input.indexOf("=");
+                                        var result = Input.substring(num+1,Input.length-1);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getNumberByIofoTable">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var tableLength = selectTable.rows.length;
+                                        for (var x=0; x < tableLength; x++) {
+                                            var row = selectTable.rows[x];
+                                            //Your code here
+                                            
+                                        logger.error("-------------------"+row.Number);
+                                            var result = row.Number;
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getOIDByIofoTable">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        //var tableLength = selectTable.rows.length;
+                                            var row = selectTable.rows[0];
+                                            //Your code here 
+                                        //logger.error(tableLength+"*******-----------"+row.OID);
+                                        //    var oid = row.OID;
+                                        // result: STRING
+                                        //var result =  me.getDMOIDByPartID({
+                                        //	PartOID: oid /* STRING */
+                                        //});
+                                        
+                                        result = row.Number;
+                                        //
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getPartByNodes">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var params = {
+                                            infoTableName : "InfoTable",
+                                            dataShapeName : "PartAttrDS"
+                                        };
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(PartAttrDS)
+                                        //定义part固定属性
+                                        var myInfotable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        var newField = new Object();
+                                        newField.name = "Name";
+                                        newField.baseType = 'STRING';
+                                        myInfotable.AddField(newField);
+                                        newField.name = "Number";
+                                        newField.baseType = 'STRING';
+                                        myInfotable.AddField(newField);
+                                        newField.name = "Source";
+                                        newField.baseType = 'STRING';
+                                        myInfotable.AddField(newField);
+                                        //定义IBA属性 Cailiao
+                                        newField.name = "Cailiao";
+                                        newField.baseType = 'STRING';
+                                        myInfotable.AddField(newField);
+                                        
+                                        var params1 = {
+                                        	url: "https://PP-1912030821D4.portal.ptc.io/Windchill/servlet/odata/ClfStructure/ClfNodes('"+NodeName+"')/ClassifiedObjects",
+                                        	password: "ptc" /* STRING */,
+                                        	username: "wcadmin" /* STRING */
+                                        };
+                                        // result: JSON
+                                        var response = Resources["ContentLoaderFunctions"].GetJSON(params1);
+                                        var values = response.value;
+                                        if(values.length>0){
+                                        	for(var i=0;i<values.length;i++){
+                                            	var partinfo = values[i];
+                                                var newEntity = new Object();
+                                                newEntity.OID = partinfo.ID;
+                                                newEntity.Name = partinfo.Name;
+                                                newEntity.Number = partinfo.Number;
+                                                newEntity.Source = partinfo.Source;
+                                                newEntity.Cailiao = me.getIBAValueBysubString({
+                                        			Input: partinfo.Cailiao /* STRING */
+                                                 });
+                                                //-----其他基本属性
+                                                var classificationInfo = partinfo.ClassificationAttributes;
+                                                if(classificationInfo.length>0){
+                                                	for(var j=0;j<classificationInfo.length;j++){
+                                                        var classinfo = classificationInfo[j];
+                                                        var newField2 = new Object();
+                                                        newField2.name = classinfo.DisplayName;
+                                                        newField2.baseType = 'STRING';
+                                                        myInfotable.AddField(newField2);
+                                                        var key = classinfo.DisplayName;
+                                                        var value = classinfo.Value;
+                                                        newEntity[key] = value;   
+                                                    }
+                                                }
+                                                myInfotable.AddRow(newEntity);
+                                            }
+                                        }
+                                        var result = myInfotable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getSonMuUrl">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        result = "/Thingworx/Runtime/index.html?mashup=SonMU&node="+node;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getTreeInfoTable">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        result = me.TreeInfoTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="infotable">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var params = {
+                                            infoTableName : "InfoTable",
+                                            dataShapeName : "WindchillClassificationDS"
+                                        };
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(WindchillClassificationDS)
+                                        var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        var newEntry = new Object();
+                                            newEntry.ID = "1"; // INTEGER
+                                            newEntry.Name = "2"; // DATETIME
+                                            newEntry.Child = "RootParent";
+                                        	result.AddRow(newEntry);
+                                        var newEntry2 = new Object();
+                                            newEntry2.ID = "2"; // INTEGER
+                                            newEntry2.Name = "22"; // DATETIME
+                                            newEntry2.Parent = "RootParent";
+                                             newEntry2.Child = "ccc";
+                                        	result.AddRow(newEntry2);
+                                        var newEntry2 = new Object();
+                                            newEntry2.ID = "3"; // INTEGER
+                                            newEntry2.Name = "22"; // DATETIME
+                                            newEntry2.Parent = "RootParent";
+                                             newEntry2.Child = "ChildNode2";
+                                        	result.AddRow(newEntry2);
+                                        var newEntry2 = new Object();
+                                            newEntry2.ID = "4"; // INTEGER
+                                            newEntry2.Name = "22"; // DATETIME
+                                            newEntry2.Parent = "RootParent";
+                                             newEntry2.Child = "ChildNode3";
+                                        	result.AddRow(newEntry2);
+                                        var newEntry2 = new Object();
+                                            newEntry2.ID = "5"; // INTEGER
+                                            newEntry2.Name = "22"; // DATETIME
+                                            newEntry2.Parent = "ccc";
+                                             newEntry2.Child = "ChildNode5";
+                                        	result.AddRow(newEntry2);
+                                        var newEntry2 = new Object();
+                                            newEntry2.ID = "6"; // INTEGER
+                                            newEntry2.Name = "22"; // DATETIME
+                                            newEntry2.Parent = "ChildNode2";
+                                             newEntry2.Child = "ChildNode6";
+                                        	result.AddRow(newEntry2);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="LoopClassfication">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var result = table;
+                                        
+                                        var params1 = {
+                                        	url: "https://PP-1912030821D4.portal.ptc.io/Windchill/servlet/odata/v1/ClfStructure/ClfNodes('"+Root+"')/ChildNodes",
+                                        	password: "ptc" /* STRING */,
+                                        	username: "wcadmin" /* STRING */
+                                        };
+                                        // result: JSON
+                                        var response = Resources["ContentLoaderFunctions"].GetJSON(params1);
+                                        var childrens = response.value;
+                                        if(childrens.length>0){
+                                        		for(var i = 0;i<childrens.length;i++){
+                                                    var parent = Root;
+                                                	var child = childrens[i];
+                                                    var cid = child.ID;
+                                                    var cname = child.DisplayName;
+                                                    var newEntry = new Object();
+                                                    newEntry.ID = cid; // INTEGER
+                                                    newEntry.Name = cname; // DATETIME
+                                                        newEntry.Parent = Root;
+                                                    newEntry.Child = cid;
+                                                    result.AddRow(newEntry);
+                                                    var params2 = {
+                                                        url: "https://PP-1912030821D4.portal.ptc.io/Windchill/servlet/odata/v1/ClfStructure/ClfNodes('"+cid+"')/ChildNodes",
+                                                        password: "ptc" /* STRING */,
+                                                        username: "wcadmin" /* STRING */
+                                                    };
+                                                    var response2 = Resources["ContentLoaderFunctions"].GetJSON(params1);
+                                                    var childrens2 = response.value;
+                                                    if(childrens2.length>0){
+                                                    	// result: INFOTABLE dataShape: "WindchillClassificationDS"
+                                                        result =  me.LoopClassfication({
+                                                            Root: cid /* STRING */,
+                                                            table: result /* INFOTABLE */
+                                                        });
+                                                    }
+                                                }
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="setTreeInfoTable">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        //改称根节点-----------------------------------------------------
+                                        var Root = "Test1";
+                                        //infotable
+                                        var params2 = {
+                                            infoTableName : "InfoTable",
+                                            dataShapeName : "WindchillClassificationDS"
+                                        };
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(WindchillClassificationDS)
+                                        var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params2);
+                                        var newEntry = new Object();
+                                        newEntry.ID = "Root"; // INTEGER
+                                        newEntry.Name = "Root"; // DATETIME
+                                        newEntry.Child = "RootParent";
+                                        
+                                        result.AddRow(newEntry);
+                                        var newEntry = new Object();
+                                        //改称根节点-----------------------------------------------------
+                                        newEntry.ID = Root; // INTEGER
+                                        newEntry.Name = Root; // DATETIME
+                                        newEntry.Parent = "RootParent";
+                                        newEntry.Child = Root;
+                                        result.AddRow(newEntry);
+                                        
+                                        
+                                        // result: INFOTABLE dataShape: "WindchillClassificationDS"
+                                        result =  me.LoopClassfication({
+                                        	Root: Root /* STRING */,
+                                        	table: result /* INFOTABLE */
+                                        });
+                                        
+                                        me.TreeInfoTable = result;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="test">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var Root = "Test1";
+                                        //infotable
+                                        var params2 = {
+                                            infoTableName : "InfoTable",
+                                            dataShapeName : "WindchillClassificationDS"
+                                        };
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(WindchillClassificationDS)
+                                        var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params2);
+                                        var newEntry = new Object();
+                                        newEntry.ID = Root; // INTEGER
+                                        newEntry.Name = Root; // DATETIME
+                                        newEntry.Child = "RootParent";
+                                        result.AddRow(newEntry);
+                                        
+                                        // result: INFOTABLE dataShape: "WindchillClassificationDS"
+                                        result =  me.LoopClassfication({
+                                        	Root: Root /* STRING */,
+                                        	table: result /* INFOTABLE */
+                                        });
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="test2">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        //var params1 = {
+                                        //	url: "https://PP-1912030821D4.portal.ptc.io/Windchill/servlet/odata/v1/ClfStructure/ClfNodes('Test1')/ChildNodes",
+                                        //	password: "ptc" /* STRING */,
+                                        //	username: "wcadmin" /* STRING */
+                                        //};
+                                        //var level = 1;
+                                        //// result: JSON
+                                        //var response = Resources["ContentLoaderFunctions"].GetJSON(params1);
+                                        //var childrens = response.value;
+                                        //var result = childrens.length;
+                                        
+                                        var params1 = {
+                                        	url: "https://PP-1912030821D4.portal.ptc.io/Windchill/servlet/odata/ClfStructure/ClfNodes('TestSon1')/ClassifiedObjects",
+                                        	password: "ptc" /* STRING */,
+                                        	username: "wcadmin" /* STRING */
+                                        };
+                                        // result: JSON
+                                        var response = Resources["ContentLoaderFunctions"].GetJSON(params1);
+                                        var result = response.value.length;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="yui">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var params = {
+                                        	path: '/rrrrrrrrrrrrr' /* STRING */,
+                                        	endDate: undefined /* DATETIME */,
+                                        	name: 'rrrrrr' /* STRING */,
+                                        	includeDependents: undefined /* BOOLEAN */,
+                                        	collection: undefined /* STRING */,
+                                        	repositoryName: 'SourceControl1' /* THINGNAME */,
+                                        	projectName: 'Windchill' /* PROJECTNAME */,
+                                        	startDate: undefined /* DATETIME */,
+                                        	tags: undefined /* TAGS */
+                                        };
+                                        
+                                        // result: HYPERLINK
+                                        var result = Resources["SourceControlFunctions"].ExportSourceControlledEntities(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations>
+                <AlertDefinitions
+                 name="TreeInfoTable"></AlertDefinitions>
+            </AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties>
+                <TreeInfoTable>
+                    <Value>
+                        <infoTable>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="Child"
+                                     ordinal="4"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="ID"
+                                     ordinal="1"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="Name"
+                                     ordinal="2"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="Parent"
+                                     ordinal="3"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <Child>
+                                    <![CDATA[
+                                    RootParent
+                                    ]]>
+                                    </Child>
+                                    <ID>
+                                    <![CDATA[
+                                    Root
+                                    ]]>
+                                    </ID>
+                                    <Name>
+                                    <![CDATA[
+                                    Root
+                                    ]]>
+                                    </Name>
+                                </Row>
+                                <Row>
+                                    <Child>
+                                    <![CDATA[
+                                    Test1
+                                    ]]>
+                                    </Child>
+                                    <ID>
+                                    <![CDATA[
+                                    Test1
+                                    ]]>
+                                    </ID>
+                                    <Name>
+                                    <![CDATA[
+                                    Test1
+                                    ]]>
+                                    </Name>
+                                    <Parent>
+                                    <![CDATA[
+                                    RootParent
+                                    ]]>
+                                    </Parent>
+                                </Row>
+                                <Row>
+                                    <Child>
+                                    <![CDATA[
+                                    TestSon1
+                                    ]]>
+                                    </Child>
+                                    <ID>
+                                    <![CDATA[
+                                    TestSon1
+                                    ]]>
+                                    </ID>
+                                    <Name>
+                                    <![CDATA[
+                                    TestSon1
+                                    ]]>
+                                    </Name>
+                                    <Parent>
+                                    <![CDATA[
+                                    Test1
+                                    ]]>
+                                    </Parent>
+                                </Row>
+                                <Row>
+                                    <Child>
+                                    <![CDATA[
+                                    TestSon2
+                                    ]]>
+                                    </Child>
+                                    <ID>
+                                    <![CDATA[
+                                    TestSon2
+                                    ]]>
+                                    </ID>
+                                    <Name>
+                                    <![CDATA[
+                                    TestSon2
+                                    ]]>
+                                    </Name>
+                                    <Parent>
+                                    <![CDATA[
+                                    Test1
+                                    ]]>
+                                    </Parent>
+                                </Row>
+                                <Row>
+                                    <Child>
+                                    <![CDATA[
+                                    TestSon01
+                                    ]]>
+                                    </Child>
+                                    <ID>
+                                    <![CDATA[
+                                    TestSon01
+                                    ]]>
+                                    </ID>
+                                    <Name>
+                                    <![CDATA[
+                                    TestSon01
+                                    ]]>
+                                    </Name>
+                                    <Parent>
+                                    <![CDATA[
+                                    TestSon2
+                                    ]]>
+                                    </Parent>
+                                </Row>
+                            </Rows>
+                        </infoTable>
+                    </Value>
+                    <Timestamp>2019-12-05T13:59:53.754+08:00</Timestamp>
+                    <Quality>GOOD</Quality>
+                </TreeInfoTable>
+            </ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

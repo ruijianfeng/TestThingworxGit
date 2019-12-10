@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b12"
+ majorVersion="8"
+ minorVersion="5"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="0"
+ schemaVersion="1050"
+ universal="password">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         lastModifiedDate="2019-12-10T17:00:50.297+08:00"
+         name="Windchill3DFileUtilities"
+         projectName="Windchill"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="password"
+                     ordinal="4"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="username"
+                     ordinal="3"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="WindchillURL"
+                     ordinal="2"></PropertyDefinition>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="Get3DFileURL">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.isRequired="true"
+                             baseType="STRING"
+                             description=""
+                             name="OID"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetPart3DMap">
+                        <ResultType
+                         aspect.dataShape="WindchillPart3DMapDS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INFOTABLE"
+                             description=""
+                             name="InputTable"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetPart3DOIDFromMap">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="WindchillPart3DMapDS"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="MapTable"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.isRequired="true"
+                             baseType="STRING"
+                             description=""
+                             name="Number"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="tableReady">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="Get3DFileURL">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var urlrow;
+                                        try {
+                                          	urlrow =  Things["Windchill3DFiles"].GetDataTableEntryByKey({
+                                        		key: OID /* STRING */
+                                        	});
+                                        }catch(err) {}
+                                        
+                                        var result;
+                                        if(urlrow){
+                                            result = urlrow.ViewURL;
+                                        }else{
+                                            var params = {
+                                                representationOID: OID /* STRING */,
+                                                password: me.password /* STRING */,
+                                                WindchillURL: me.WindchillURL /* STRING */,
+                                                username: me.username /* STRING */
+                                            };
+                                        
+                                        	// result: STRING
+                                        	var newFile = Resources["ServerFileDownload"].pvzFileToThingworxServer(params);
+                                            var params = {
+                                                infoTableName : "InfoTable",
+                                                dataShapeName : "Windchill3DFileDS"
+                                            };
+                                        
+                                            // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(Windchill3DFileDS)
+                                            var new3dFileInfotable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                            // Windchill3DFileDS entry object
+                                            var new3dFileEntry = new Object();
+                                            new3dFileEntry.ViewURL = newFile; // STRING
+                                            new3dFileEntry.OID = OID; // STRING [Primary Key]
+                                        	new3dFileInfotable.AddRow(new3dFileEntry);
+                                            Things["Windchill3DFiles"].AddOrUpdateDataTableEntries({
+                                                sourceType: undefined /* STRING */,
+                                                values: new3dFileInfotable /* INFOTABLE */,
+                                                location: undefined /* LOCATION */,
+                                                source: undefined /* STRING */,
+                                                tags: undefined /* TAGS */
+                                            });
+                                            result = newFile;
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetPart3DMap">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var tableURL = me.WindchillURL+"/servlet/odata/v1/ProdMgmt/Parts?$expand=Representations&$filter=";
+                                        var tableLength = InputTable.rows.length;
+                                        for (var x=0; x < tableLength; x++) {
+                                            var row = InputTable.rows[x];
+                                            //Your code here
+                                            var partNumber = row.Number;
+                                            if(x == (tableLength-1)){
+                                            	tableURL = tableURL + "Number%20eq%20'"+ partNumber +"'";
+                                            }else{
+                                            	tableURL = tableURL + "Number%20eq%20'"+ partNumber +"'%20or%20";
+                                            }
+                                        }
+                                        
+                                        var paramsMap = {
+                                            infoTableName : "InfoTable",
+                                            dataShapeName : "WindchillPart3DMapDS"
+                                        };
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(WindchillPart3DMapDS)
+                                        var infotableMap = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(paramsMap);
+                                        
+                                        
+                                        
+                                        var params1 = {
+                                        	url: tableURL,
+                                        	password: me.password /* STRING */,
+                                        	username: me.username /* STRING */
+                                        };
+                                        // result: JSON
+                                        var response = Resources["ContentLoaderFunctions"].GetJSON(params1);
+                                        var values = response.value;
+                                        if(values.length>0){
+                                        	for(var i=0;i<values.length;i++){
+                                                var partinfo = values[i];
+                                                var reps = partinfo.Representations;
+                                                var derivedImageid = '';
+                                                if(reps.length>0){
+                                                    for(var j = 0;j<reps.length;j++){
+                                                        var rep = reps[j];
+                                                        var def = rep.DefaultRepresentation;
+                                                        var imageid = rep.ID;
+                                                        if(def){
+                                                            derivedImageid = imageid;
+                                                        }
+                                                    }
+                                                }
+                                                logger.info("---------------------------------------"+derivedImageid+"&"+partinfo.Number);
+                                                // WindchillPart3DMapDS entry object
+                                                var newEntry = new Object();
+                                                newEntry.Number = partinfo.Number; // STRING [Primary Key]
+                                                newEntry.OID = derivedImageid; // STRING
+                                        		infotableMap.AddRow(newEntry);
+                                        
+                                            }
+                                        }
+                                        result = infotableMap;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetPart3DOIDFromMap">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var params = {
+                                        	fieldName: 'Number' /* STRING */,
+                                        	isCaseSensitive: true /* BOOLEAN */,
+                                        	t: MapTable /* INFOTABLE */,
+                                        	value: Number /* STRING */
+                                        };
+                                        
+                                        // result: INFOTABLE
+                                        var findTable = Resources["InfoTableFunctions"].EQFilter(params);
+                                        
+                                        var result = findTable.getRow(0).OID;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="tableReady">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        result = true;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations>
+                <AlertDefinitions
+                 name="password"></AlertDefinitions>
+                <AlertDefinitions
+                 name="username"></AlertDefinitions>
+                <AlertDefinitions
+                 name="WindchillURL"></AlertDefinitions>
+            </AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties>
+                <password>
+                    <Value>
+                    <![CDATA[
+                    ptc
+                    ]]>
+                    </Value>
+                    <Timestamp>2019-12-05T22:26:40.297+08:00</Timestamp>
+                    <Quality>GOOD</Quality>
+                </password>
+                <username>
+                    <Value>
+                    <![CDATA[
+                    wcadmin
+                    ]]>
+                    </Value>
+                    <Timestamp>2019-12-05T22:26:45.302+08:00</Timestamp>
+                    <Quality>GOOD</Quality>
+                </username>
+                <WindchillURL>
+                    <Value>
+                    <![CDATA[
+                    https://PP-1912030821D4.portal.ptc.io/Windchill
+                    ]]>
+                    </Value>
+                    <Timestamp>2019-12-05T22:26:48.859+08:00</Timestamp>
+                    <Quality>GOOD</Quality>
+                </WindchillURL>
+            </ThingProperties>
+        </Thing>
+    </Things>
+</Entities>
