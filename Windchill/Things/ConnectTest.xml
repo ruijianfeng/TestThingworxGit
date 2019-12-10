@@ -15,7 +15,7 @@
          enabled="true"
          homeMashup=""
          identifier=""
-         lastModifiedDate="2019-12-10T21:29:29.227+08:00"
+         lastModifiedDate="2019-12-10T21:40:22.558+08:00"
          name="ConnectTest"
          projectName="Windchill"
          published="false"
@@ -333,6 +333,22 @@
                          ordinal="0"></ResultType>
                         <ParameterDefinitions></ParameterDefinitions>
                     </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="yuiCopy">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
                 </ServiceDefinitions>
                 <EventDefinitions></EventDefinitions>
                 <ServiceMappings></ServiceMappings>
@@ -393,7 +409,7 @@
                                         <![CDATA[
                                         var params1 = {
                                         	url: "https://PP-1912030821D4.portal.ptc.io/Windchill/servlet/odata/v3/ProdMgmt/Parts('"+PartOID+"')?$expand=Representations",
-                                        	password: "ptc" /* STRING1231111123123 */,
+                                        	password: "ptc" /* STRING12311fdsafaf */,
                                         	username: "wcadmin" /* STRING */
                                         };
                                         // result: JSONffdsa
@@ -984,6 +1000,50 @@
                      description=""
                      handlerName="Script"
                      name="yui">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var params = {
+                                        	path: '/rrrrrrrrrrrrr' /* STRING */,
+                                        	endDate: undefined /* DATETIME */,
+                                        	name: 'rrrrrr' /* STRING */,
+                                        	includeDependents: undefined /* BOOLEAN */,
+                                        	collection: undefined /* STRING */,
+                                        	repositoryName: 'SourceControl1' /* THINGNAME */,
+                                        	projectName: 'Windchill' /* PROJECTNAME */,
+                                        	startDate: undefined /* DATETIME */,
+                                        	tags: undefined /* TAGS */
+                                        };
+                                        
+                                        // result: HYPERLINK
+                                        var result = Resources["SourceControlFunctions"].ExportSourceControlledEntities(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="yuiCopy">
                         <ConfigurationTables>
                             <ConfigurationTable
                              description=""
