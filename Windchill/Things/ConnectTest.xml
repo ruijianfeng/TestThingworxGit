@@ -396,7 +396,7 @@
                                         	password: "ptc" /* STRING123 */,
                                         	username: "wcadmin" /* STRING */
                                         };
-                                        // result: JSON
+                                        // result: JSONffdsa
                                         
                                         var response = Resources["ContentLoaderFunctions"].GetJSON(params1);
                                         var reps = response.Representations;
