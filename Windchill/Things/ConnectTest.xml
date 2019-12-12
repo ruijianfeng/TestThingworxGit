@@ -9,13 +9,13 @@
  universal="password">
     <Things>
         <Thing
-         description="11111111111111"
+         description="fdsfasdfasdfdsafdsaf"
          documentationContent=""
          effectiveThingPackage="ConfiguredThing"
          enabled="true"
          homeMashup=""
          identifier=""
-         lastModifiedDate="2019-12-10T21:49:33.086+08:00"
+         lastModifiedDate="2019-12-11T15:52:40.165+08:00"
          name="ConnectTest"
          projectName="Windchill"
          published="false"
@@ -1064,7 +1064,7 @@
                                         <code>
                                         <![CDATA[
                                         var params = {
-                                        	path: '/rrrrrrrrrrrrr' /* STRING */,
+                                        	path: undefined /* STRING */,
                                         	endDate: undefined /* DATETIME */,
                                         	name: 'rrrrrr' /* STRING */,
                                         	includeDependents: undefined /* BOOLEAN */,
